@@ -72,8 +72,8 @@ namespace Lab8.Purple
         {
             private string _name;
             private Sportsman[] _sportsmen;
-            private Sportsman[] men;
-            private Sportsman[] women;
+            private Sportsman[] men = Array.Empty<Sportsman>();
+            private Sportsman[] women = Array.Empty<Sportsman>();
             public string Name => _name;
             public Sportsman[] Sportsmen => _sportsmen;
             public Sportsman[] Men => men;
