@@ -90,15 +90,15 @@ namespace Lab8.Purple
         public abstract class SkiJumping
         {
             private string _name;
-            private int _standart;
+            private int _standard;
             private Participant[] _participants;
             public string Name => _name;
-            public int Standart => _standart;
+            public int Standard => _standard;
             public Participant[] Participants => _participants;
-            public SkiJumping(string Name, int Standart)
+            public SkiJumping(string Name, int standard)
             {
                 _name = Name;
-                _standart = Standart;
+                _standard = standard;
                 _participants = new Participant[0];
             }
             public void Add(Participant participant)
@@ -124,14 +124,14 @@ namespace Lab8.Purple
                 {
                     if (_participants[i].Distance == 0)
                     {
-                        _participants[i].Jump(distance, marks, _standart);
+                        _participants[i].Jump(distance, marks, _standard);
                         break;
                     }
                 }
             }
             public void Print()
             {
-                Console.WriteLine($"Соревнование: {_name}, Норматив: {_standart}");
+                Console.WriteLine($"Соревнование: {_name}, Норматив: {_standard}");
                 for (int i = 0; i < _participants.Length; i++)
                 {
                     _participants[i].Print();
